@@ -1,0 +1,5 @@
+- hosts: localhost
+  name: Clean .dotfiles
+  gather_facts: no
+  tasks:
+  - name: 
