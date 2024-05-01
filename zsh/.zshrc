@@ -102,3 +102,4 @@ source $ZSH/oh-my-zsh.sh
 
 export PATH=$PATH:/Users/hurtsec/Library/Python/3.9/bin
 export PATH=$(brew --prefix openssh)/bin:$PATH
+source ~/.zsh_profile
