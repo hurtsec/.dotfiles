@@ -5,7 +5,7 @@ shift + cmd - r: skhd --reload
 shift + cmd - y : yabai --restart-service
 
 # start a terminal
-cmd - return : open /System/Applications/Utilities/Terminal.app 
+cmd - return : open /Applications/Warp.app 
 
 # changing window focus
 alt - j : yabai -m window --focus south

@@ -1,9 +1,38 @@
+#!/bin/sh
+
 # startup shit
 yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
 sudo yabai --load-sa
 
 # default layout (can be bsp, stack, or float)
 yabai -m config layout bsp
+
+for _ in $(yabai -m query --spaces | jq '.[].index | select(. > 1)'); do
+    yabai -m space --destroy 2
+done
+
+function setup_space {
+    local idx="$1"
+    local name="$2"
+    local space=
+    echo "setup space $idx : $name"
+
+    space = $(yabai -m query --spaces --space "$idx")
+    if [ -z "$space" ]; then
+        yabai -m space --create
+    fi
+
+    yabai -m space "$idx" --label "$name"
+}
+
+setup_space 1 browser
+setup_space 2 slack
+setup_space 3 terminal
+setup_space 4 ide
+setup_space 5 zoom
+setup_space 6 media
+setup_space 7 social
+setup_space 8 notion
 
 # New window spawns to the right if vertical split, or bottom if horizontal split
 yabai -m config window_placement second_child
@@ -29,7 +58,13 @@ yabai -m config mouse_action2 resize
 yabai -m mouse_drop_action swap
 
 # Set rules for which applications occupy which space
-yabai -m rule --add app="^Terminal$" space=^3
+yabai -m rule --add app="^Google Chrome$" space=1
+yabai -m rule --add app="^Slack$" space=2
+yabai -m rule --add app="^Warp$" space=3
+yabai -m rule --add app="^Code$" space=4
+yabai -m rule --add app="^Zoom$" space=5
+yabai -m rule --add app="^Spotify$" space=6
+yabai -m rule --add app="^Notion$" space=8
 
 # Reduce opacity of un-focused windows
 yabai -m config window_opacity on
