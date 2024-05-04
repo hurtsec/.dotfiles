@@ -9,23 +9,15 @@ cmd - return : open /Applications/Warp.app
 
 # changing window focus
 alt - j : yabai -m window --focus south
-alt - down : yabai -m window --focus south
 alt - h : yabai -m window --focus west
-alt - left : yabai -m window --focus west
 alt - k : yabai -m window --focus north
-alt - up : yabai -m window --focus north
 alt - l : yabai -m window --focus east
-alt - right : yabai -m window --focus east
 
 # move focused window
 alt + shift - j : yabai -m window --warp south
-alt + shift - down : yabai -m window --warp south
 alt + shift - h : yabai -m window --warp west
-alt + shift - left : yabai -m window --warp west
 alt + shift - k : yabai -m window --warp north
-alt + shift - up : yabai -m window --warp north
 alt + shift - l : yabai -m window --warp east
-alt + shift - right : yabai -m window --warp east
 
 # split window in horizontal orientation
 # TODO Split warp/terminal
