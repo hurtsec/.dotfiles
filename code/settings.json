@@ -5,6 +5,36 @@
     "editor.lineNumbers": "relative",
     "editor.minimap.enabled": false,
     "vim.leader": ",",
+    "vim.insertModeKeyBindings": [
+        {
+            "before": [
+                "j",
+                "j"
+            ],
+            "after": [
+                "<Esc>"
+            ]
+        },
+    ],
+    // "vim.insertModeKeyBindings": [
+    //     {
+    //         "before": [
+    //             "j",
+    //             "j"
+    //         ],
+    //         "after": [
+    //             "<Esc>"
+    //         ]
+    //     },
+    //     {
+    //         "before": [
+    //             "<Nop>"
+    //         ],
+    //         "after": [
+    //             "<Esc>"
+    //         ]
+    //     }
+    // ],
     "vim.normalModeKeyBindingsNonRecursive": [
         // NAVIGATION
         // switch b/w buffers
