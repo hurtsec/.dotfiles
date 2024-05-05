@@ -1,5 +1,6 @@
 {
     "breadcrumbs.enabled": false,
+    "editor.cursorSurroundingLines": 12,
     "editor.fontSize": 16,
     "editor.formatOnSave": true,
     "editor.lineNumbers": "relative",
