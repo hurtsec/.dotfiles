@@ -101,5 +101,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 export PATH=$PATH:/Users/hurtsec/Library/Python/3.9/bin
+export PATH=$PATH:/Users/jhurthurtsec/Library/Python/3.9/bin
+export PATH=$PATH:/opt/homebrew/bin
 export PATH=$(brew --prefix openssh)/bin:$PATH
 source ~/.zsh_profile
